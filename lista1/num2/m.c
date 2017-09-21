@@ -3,39 +3,24 @@
 int main()
 {
     //variaveis
-    char vogais[] = "aeiouAEIOU";
     char letra;
 
     //Anuncio do objetivo do programa e entrada de dados
-    printf("Digite uma letra e descubra se ela é um vogal ou nao: ");
+    printf("Digite uma caracter e descubra se ela é um vogal ou nao: ");
     scanf("%c", &letra);
 
-    //Para descobrir se a letra é uma vogal basta comparar
-    //ela com todos os elementos da lista de 10 caracteres 
-    //que compoem o numero de vogais maiusculas e minusculas
-    //do alfabeto.
-    for(int i = 0 ; i < 11 ; i++)
-    {
-        //Há duas condições de parada:
-
-        //Caso seja uma vogal basta modificar o contador do for
-        //para 11 e a checagem é finalizada e o resultado exibido
-        if(letra == vogais[i])
-        {
-            printf("Vogal");
-            i = 11;
-        }
-
-        //Caso seja uma consoante o contador irá chegar a 10, o
-        //que significa a posição 11, que nao existe na lista de
-        //vogais, logo e exibida a mensagem nao e uma vogal atravez
-        //de outro if.
-        if(i == 10)
-            printf("Nao vogal");
-
-
-    }
-
+    //Para descobrir se a caracter é uma vogal basta checar se
+    //ela corresponde as posições da tabela ASCII referentes aos 
+    // as vogais
+    
+    if( letra == 65 || letra == 69 ||  letra == 73 || letra == 79 || letra == 85 ||
+        letra == 97 || letra == 101 || letra == 105 || letra == 111 || letra == 117)
+        
+        printf("Vogal \n");
+    
+    else 
+        printf("Nao vogal\n");
+    
     return 0;
 
 }
