@@ -3,10 +3,27 @@
 #include "structs.c"
 
 int main(){
-    test lucas;
+    agMedico lucas;
     int fim;
 
-    printf("tortona\n");
+    preencheMedicos(&lucas);
+
+
+    for(int i = 0; lucas.nome[i] != '\0'; i++){
+        printf("%c", lucas.nome[i]);
+    }
+
+    printf("\n");
+
+    for(int i = 0; lucas.especialidade[i] != '\0'; i++){
+        printf("%c", lucas.especialidade[i]);
+    }
+
+    
+    //Aparentemente é necessário por esse expoço para evitar
+    //a exibição de "lixo" que esta na memoria
+    printf("\n");
+   /* printf("tortona\n");
 
     printf("\n");
 
@@ -23,13 +40,9 @@ int main(){
 
     printf("\n");
 
-    for(int i = 0; i < fim; i++){
-        printf("%c", lucas.nome[i]);
-    }
-
-    printf("\n");
     
- /*
+    
+ 
     for(int i; i < dim; i++){
         printf("%c", lucas.nome[i]);
     }

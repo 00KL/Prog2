@@ -23,8 +23,25 @@ typedef struct {
 } cliente; 
 
 
-void preencheMedicos(char nome[dim], int id, char especialidade[dim], int agenda[h][d]){
+void preencheMedicos( agMedico *pessoa){
     
+    char lixo;
+    printf("Digite o nome do médico: ");
+    for(int i = 0; pessoa->nome[i-1] != '\n'; i++){
+        scanf("%c", &pessoa->nome[i]);
+    }
+
+    printf("Digite o codigo do médico: ");
+    scanf("%d", &pessoa->id);
+    scanf("%c",&lixo);
+
+    printf("Digite o especialidade do médico:");
+    for(int i = 0; pessoa->especialidade[i-1] != '\n'; i++){
+        scanf("%c", &pessoa->especialidade[i]);
+    }
+    printf("\n");
+
+
 }
 
 typedef struct {
